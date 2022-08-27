@@ -34,8 +34,6 @@ const startApolloServer = async (typeDefs, resolvers) => {
   })
   };
 
-//here 
-"*" => this is a wildcard and it will take any route and return your react app
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 })
