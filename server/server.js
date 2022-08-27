@@ -21,6 +21,9 @@ app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../client/build')));
+}
+
 // Create a new instance of an Apollo server with the GraphQL schema
 const startApolloServer = async (typeDefs, resolvers) => {
   await server.start();
@@ -37,7 +40,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 })
-  };
+;
   
   // Call the async function to start the server
   startApolloServer(typeDefs, resolvers);
