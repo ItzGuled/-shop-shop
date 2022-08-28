@@ -5,7 +5,7 @@
   
   [Application LINK](https://shop-buddy-mern.herokuapp.com/)
   
-  ![shop-buddy](./src/assets/screenshots/shop.PNG)
+  ![shop-buddy](./client/src/assets/screenshots/shopbuddy.PNG)
 
 
   ## Table of Contents
